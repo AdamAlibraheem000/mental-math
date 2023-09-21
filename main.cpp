@@ -7,7 +7,10 @@
 using std::cin;
 using std::cout;
 using std::endl;
+using std::random_device;
 using std::string;
+using std::uniform_int_distribution;
+using std::setw;
 
 // Menus
 void mainMenu();
@@ -352,134 +355,195 @@ void mainMenu()
     }
 }
 
-
 // Addition functions
-void addOneByOne(){
-    cout << "one by one";
+void addOneByOne()
+{
+
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> dist(1, 9);
+
+    while (true)
+    {
+        int numOne = dist(rd);
+        int numTwo = dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "+ " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne + numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
-void addTwoByOne(){
+void addTwoByOne()
+{
     cout << "Two by one";
 }
 
-void addTwoByTwo(){
+void addTwoByTwo()
+{
     cout << "Two by Two";
 }
 
-void addThreeByOne(){
+void addThreeByOne()
+{
     cout << "Three by one";
 }
 
-void addThreeByTwo(){
+void addThreeByTwo()
+{
     cout << "Three by two";
 }
 
-void addThreeByThree(){
+void addThreeByThree()
+{
     cout << "Three by Three";
 }
 
-void addFourByOne(){
+void addFourByOne()
+{
     cout << "Four by One";
 }
 
-void addFourByTwo(){
+void addFourByTwo()
+{
     cout << "Four by Two";
 }
 
-void addFourByThree(){
+void addFourByThree()
+{
     cout << "Four by Three";
 }
 
-void addFourByFour(){
+void addFourByFour()
+{
     cout << "Four by Four";
 }
 
 // Subtraction functions
-void subOneByOne(){
+void subOneByOne()
+{
     cout << "One by one";
 }
 
-void subTwoByOne(){
+void subTwoByOne()
+{
     cout << "Two by one";
 }
 
-void subTwoByTwo(){
+void subTwoByTwo()
+{
     cout << "Two by two";
 }
 
-
-void subThreeByOne(){
+void subThreeByOne()
+{
     cout << "Three by one";
 }
 
-void subThreeByTwo(){
+void subThreeByTwo()
+{
     cout << "Three by two";
 }
 
-void subThreeByThree(){
+void subThreeByThree()
+{
     cout << "Three by Three";
 }
 
-
-void subFourByOne(){
+void subFourByOne()
+{
     cout << "Four by one";
 }
 
-void subFourByTwo(){
+void subFourByTwo()
+{
     cout << "Four by Two";
 }
 
-void subFourByThree(){
+void subFourByThree()
+{
     cout << "Four by Three";
 }
 
-void subFourByFour(){
+void subFourByFour()
+{
     cout << "Four by Four";
 }
 
 // Multiplication functions
-void mulOneByOne(){
+void mulOneByOne()
+{
     cout << "One by One";
 }
-void mulTwoByOne(){
+void mulTwoByOne()
+{
     cout << "Two by one";
 }
 
-void mulTwoByTwo(){
+void mulTwoByTwo()
+{
     cout << "Two by Two";
 }
-void mulThreeByOne(){
+void mulThreeByOne()
+{
     cout << "Three by one";
 }
-void mulThreeByTwo(){
+void mulThreeByTwo()
+{
     cout << "Three by two";
 }
-void mulThreeByThree(){
+void mulThreeByThree()
+{
     cout << "Three by Three";
 }
-void mulFourByOne(){
+void mulFourByOne()
+{
     cout << "Four by one";
 }
-void mulFourByTwo(){
+void mulFourByTwo()
+{
     cout << "Four by Two";
 }
-void mulFourByThree(){
+void mulFourByThree()
+{
     cout << "Four by Three";
 }
-void mulFourByFour(){
+void mulFourByFour()
+{
     cout << "Four by Four";
 }
 
 // Division functions
-void divOneByOne(){
+void divOneByOne()
+{
     cout << "Div one";
 }
-void divOneByTwo(){
+void divOneByTwo()
+{
     cout << "Div two";
 }
-void divOneByThree(){
+void divOneByThree()
+{
     cout << "Div three";
 }
-void divOneByFour(){
+void divOneByFour()
+{
     cout << "Div four";
 }
