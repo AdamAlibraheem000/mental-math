@@ -1401,7 +1401,37 @@ void mulFourByFour()
 // Division functions
 void divOneByOne()
 {
-    cout << "Div one";
+    double userAnswer = 0.0;
+    double answer = 0.0;
+    random_device rd;
+    uniform_int_distribution<int> one_dist(2, 9);
+    uniform_int_distribution<int> one_again_dist(2, 9);
+
+    while (true)
+    {
+        int numOne = one_dist(rd);
+        int numTwo = one_again_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "/ " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = static_cast<double>(numOne) / numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 void divOneByTwo()
 {
