@@ -393,12 +393,72 @@ void addOneByOne()
 
 void addTwoByOne()
 {
-    cout << "Two by one";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> two_dist(10, 99);
+    uniform_int_distribution<int> one_dist(1, 9);
+
+    while (true)
+    {
+        int numOne = two_dist(rd);
+        int numTwo = one_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "+ " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne + numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
 void addTwoByTwo()
 {
-    cout << "Two by Two";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> two_dist(10, 99);
+    uniform_int_distribution<int> sec_two_dist(10, 99);
+
+    while (true)
+    {
+        int numOne = two_dist(rd);
+        int numTwo = sec_two_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "+ " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne + numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
 void addThreeByOne()
@@ -439,17 +499,106 @@ void addFourByFour()
 // Subtraction functions
 void subOneByOne()
 {
-    cout << "One by one";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> dist(1, 9);
+
+    while (true)
+    {
+        int numOne = dist(rd);
+        int numTwo = dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "- " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne - numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
 void subTwoByOne()
 {
-    cout << "Two by one";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> two_dist(10, 99);
+    uniform_int_distribution<int> one_dist(1, 9);
+
+    while (true)
+    {
+        int numOne = two_dist(rd);
+        int numTwo = one_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "- " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne - numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
 void subTwoByTwo()
 {
-    cout << "Two by two";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> two_dist(10, 99);
+    uniform_int_distribution<int> sec_two_dist(10, 99);
+
+    while (true)
+    {
+        int numOne = two_dist(rd);
+        int numTwo = sec_two_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "- " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne - numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
 void subThreeByOne()
@@ -490,16 +639,105 @@ void subFourByFour()
 // Multiplication functions
 void mulOneByOne()
 {
-    cout << "One by One";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> dist(1, 9);
+
+    while (true)
+    {
+        int numOne = dist(rd);
+        int numTwo = dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "x " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne * numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 void mulTwoByOne()
 {
-    cout << "Two by one";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> two_dist(10, 99);
+    uniform_int_distribution<int> one_dist(1, 9);
+
+    while (true)
+    {
+        int numOne = two_dist(rd);
+        int numTwo = one_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "x " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne * numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 
 void mulTwoByTwo()
 {
-    cout << "Two by Two";
+    int userAnswer = 0;
+    int answer = 0;
+    random_device rd;
+    uniform_int_distribution<int> two_dist(10, 99);
+    uniform_int_distribution<int> sec_two_dist(10, 99);
+
+    while (true)
+    {
+        int numOne = two_dist(rd);
+        int numTwo = sec_two_dist(rd);
+        cout << "Enter -99 to exit\n\n";
+        cout << setw(6) << numOne << endl;
+        cout << "x " << setw(4) <<numTwo << "\n";
+        cout << setw(4) << "______\n";
+        cin >> userAnswer;
+        answer = numOne * numTwo;
+
+        if(userAnswer == -99){
+            cout << "\n\n";
+            break;
+        }
+
+        if (userAnswer == answer)
+        {
+            cout << "Correct! The answer is: " << answer << "\n\n";
+        }
+        else
+        {
+            cout << "Incorrect. The answer is: " << answer << "\n\n";
+        }
+    }
 }
 void mulThreeByOne()
 {
